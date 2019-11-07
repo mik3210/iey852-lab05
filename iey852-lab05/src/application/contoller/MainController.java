@@ -10,6 +10,8 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ListView;
+import javafx.scene.control.SelectionMode;
 import javafx.stage.Stage;
 
 public class MainController implements EventHandler<ActionEvent> {
@@ -27,7 +29,9 @@ public class MainController implements EventHandler<ActionEvent> {
 	Button zoneTY;
 	@FXML
 	Button zoneX;
-
+	ZoneController z = new ZoneController();
+	ListView<String> view;
+	
 	@Override
 	public void handle(ActionEvent arg0) {
 		// TODO Auto-generated method stub
@@ -39,6 +43,10 @@ public class MainController implements EventHandler<ActionEvent> {
 		try {
 			root = FXMLLoader.load(getClass().getResource("/Zone.fxml"));
 			Scene scene = new Scene(root);
+			
+			view = new ListView<>();
+			view.getItems().addAll("mark", "Tom");
+			view.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
 			
 			//This line gets the stage information
 			Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -70,8 +78,8 @@ public class MainController implements EventHandler<ActionEvent> {
 	
 	@FXML
 	public void rButton(ActionEvent event) {
-		loadZoneScreen(event);		// TODO Auto-generated method stub
-		
+		loadZoneScreen(event);		
+		z.populateScreenR();
 	}
 	
 	@FXML

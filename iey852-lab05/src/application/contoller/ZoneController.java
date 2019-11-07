@@ -3,6 +3,9 @@ package application.contoller;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import application.model.Park;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -22,7 +25,7 @@ public class ZoneController implements EventHandler<ActionEvent>, Initializable 
 	@FXML
 	Label threatLevelLabel;
 	@FXML
-	ListView listView;
+	ListView<String> view = new ListView<>();
 	@FXML
 	TextField nameAddTextField;
 	@FXML
@@ -39,21 +42,27 @@ public class ZoneController implements EventHandler<ActionEvent>, Initializable 
 	Button relocateButton;
 	@FXML
 	Label relocationLabel;
-	
+	Park park = new Park("Jurassic Park");
 	
 	@FXML
 	@Override
 	public void handle(ActionEvent event) {
-		// TODO Auto-generated method stub
+		
 		
 	}//end of handle method
 
+	public void populateScreenR(){
+		park.loadZones();
+		park.loadDinosaurs();
+		view.getItems().add("Hello World");
+	}
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub
 		
 	}
+
 
 }//end of ZoneController class
 

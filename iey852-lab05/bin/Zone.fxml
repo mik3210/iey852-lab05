@@ -50,7 +50,7 @@
          <children>
             <Label fx:id="numOfDinosuarsLabel" layoutX="40.0" layoutY="54.0" text="# Dinosaurs: " />
             <Label fx:id="threatLevelLabel" layoutX="40.0" layoutY="102.0" text="Threat Level" />
-            <ListView fx:id="listView" layoutX="381.0" layoutY="23.0" prefHeight="200.0" prefWidth="405.0" />
+            <ListView fx:id="view" layoutX="381.0" layoutY="23.0" prefHeight="200.0" prefWidth="405.0" />
          </children>
       </AnchorPane>
    </center>
