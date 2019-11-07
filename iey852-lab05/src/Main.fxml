@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.contoller.MainController">
+   <top>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      </AnchorPane>
+   </top>
+   <bottom>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="142.0" layoutY="14.0" text="Select a zone to continue:">
+               <font>
+                  <Font name="Broadway" size="24.0" />
+               </font>
+            </Label>
+            <Button fx:id="zoneB" layoutX="110.0" layoutY="43.0" mnemonicParsing="false" onAction="#bButton" prefHeight="75.0" prefWidth="100.0" text="B" textFill="#a41f1f">
+               <font>
+                  <Font name="Bodoni MT Bold" size="36.0" />
+               </font>
+            </Button>
+            <Button fx:id="zoneR" layoutX="433.0" layoutY="43.0" mnemonicParsing="false" onAction="#rButton" prefHeight="75.0" prefWidth="100.0" text="R" textFill="#a41f1f">
+               <font>
+                  <Font name="Bodoni MT Bold" size="36.0" />
+               </font>
+            </Button>
+            <Button fx:id="zoneD" layoutX="217.0" layoutY="43.0" mnemonicParsing="false" onAction="#dButton" prefHeight="75.0" prefWidth="100.0" text="D" textFill="#a41f1f">
+               <font>
+                  <Font name="Bodoni MT Bold" size="36.0" />
+               </font>
+            </Button>
+            <Button fx:id="zoneG" layoutX="324.0" layoutY="43.0" mnemonicParsing="false" onAction="#gButton" prefHeight="75.0" prefWidth="100.0" text="G" textFill="#a41f1f">
+               <font>
+                  <Font name="Bodoni MT Bold" size="36.0" />
+               </font>
+            </Button>
+            <Button fx:id="zoneTR" layoutX="152.0" layoutY="125.0" mnemonicParsing="false" onAction="#trButton" prefHeight="75.0" prefWidth="100.0" text="TR" textFill="#a41f1f">
+               <font>
+                  <Font name="Bodoni MT Bold" size="36.0" />
+               </font>
+            </Button>
+            <Button fx:id="zoneTY" layoutX="268.0" layoutY="125.0" mnemonicParsing="false" onAction="#tyButton" prefHeight="75.0" prefWidth="100.0" text="TY" textFill="#a41f1f">
+               <font>
+                  <Font name="Bodoni MT Bold" size="36.0" />
+               </font>
+            </Button>
+            <Button fx:id="zoneX" layoutX="389.0" layoutY="125.0" mnemonicParsing="false" onAction="#xButton" prefHeight="75.0" prefWidth="100.0" text="X" textFill="#a41f1f">
+               <font>
+                  <Font name="Bodoni MT Bold" size="36.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>

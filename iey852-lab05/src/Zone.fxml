@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.contoller.ZoneController">
+   <bottom>
+      <AnchorPane prefHeight="304.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane layoutX="71.0" prefHeight="304.0" prefWidth="329.0">
+               <children>
+                  <Label layoutX="7.0" layoutY="14.0" text="Add New Dinosaur to this Zone" />
+                  <Label layoutX="36.0" layoutY="60.0" text="Name:" />
+                  <Label layoutX="40.0" layoutY="100.0" text="Type:" />
+                  <Label layoutX="14.0" layoutY="203.0" text="Carnivore?:" />
+                  <ToggleButton fx:id="carnivoreToggle" layoutX="95.0" layoutY="198.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="39.0" text="ToggleButton" />
+                  <TextField fx:id="nameAddTextField" layoutX="95.0" layoutY="55.0" />
+                  <TextField fx:id="typeTextField" layoutX="95.0" layoutY="95.0" />
+                  <Button fx:id="addButton" layoutX="258.0" layoutY="224.0" mnemonicParsing="false" text="Add" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="400.0" prefHeight="304.0" prefWidth="329.0">
+               <children>
+                  <Label layoutX="7.0" layoutY="14.0" text="Relocate Dinosaur from this Zone" />
+                  <Label layoutX="36.0" layoutY="60.0" text="Name:" />
+                  <Label layoutX="7.0" layoutY="100.0" text="Zone Code:" />
+                  <TextField fx:id="nameRelocateTextField" layoutX="95.0" layoutY="55.0" />
+                  <TextField fx:id="zoneTextField" layoutX="95.0" layoutY="95.0" prefHeight="31.0" prefWidth="32.0" />
+                  <Button fx:id="relocateButton" layoutX="244.0" layoutY="221.0" mnemonicParsing="false" text="Relocate" />
+                  <Label fx:id="relocationLabel" layoutX="95.0" layoutY="269.0" text="Relecation: Not yet set" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </bottom>
+   <top>
+      <Label fx:id="zoneLabel" prefHeight="50.0" prefWidth="350.0" text="Zone" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="System Bold" size="34.0" />
+         </font>
+      </Label>
+   </top>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="numOfDinosuarsLabel" layoutX="40.0" layoutY="54.0" text="# Dinosaurs: " />
+            <Label fx:id="threatLevelLabel" layoutX="40.0" layoutY="102.0" text="Threat Level" />
+            <ListView fx:id="listView" layoutX="381.0" layoutY="23.0" prefHeight="200.0" prefWidth="405.0" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
