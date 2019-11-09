@@ -57,7 +57,7 @@ public class Park {
 		String threatLevel;
 
 		int count = 0;
-		openFile("src/data/zones.csv");
+		openFile("iey852-lab05/src/data/zones.csv");
 		while(x.hasNext()) {
 			String a = x.nextLine();
 			String tokens[] = a.split(",");

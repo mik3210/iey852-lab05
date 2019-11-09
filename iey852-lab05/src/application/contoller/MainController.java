@@ -1,5 +1,6 @@
 package application.contoller;
 
+import java.io.File;
 import java.io.IOException;
 
 import javafx.event.ActionEvent;
@@ -12,6 +13,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.SelectionMode;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 public class MainController implements EventHandler<ActionEvent> {
@@ -29,6 +32,8 @@ public class MainController implements EventHandler<ActionEvent> {
 	Button zoneTY;
 	@FXML
 	Button zoneX;
+	@FXML
+	ImageView imageView = new ImageView();;
 	ZoneController z = new ZoneController();
 	ListView<String> view;
 	
@@ -97,7 +102,12 @@ public class MainController implements EventHandler<ActionEvent> {
 		loadZoneScreen(event);		
 	}
 
-
+	@FXML
+	public void loadImageView(){
+		Image image =  new Image("file:/src/images/jp2.jpg");
+		imageView.setImage(image);
+//		ImageView iv = new ImageView(getClass().getResource("jurassicpark.jpg").toExternalForm());
+	}
 	
 
 }
